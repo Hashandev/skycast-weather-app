@@ -10,8 +10,7 @@
        The title should be: SkyCast — Weather Dashboard
   -->
 
-   <title>SkyCast — Weather Dashboard</title>
-
+  <title>SkyCast — Weather Dashboard</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,289 +19,264 @@
 
   <div class="page">
 
-```
-<!-- Header -->
-<header class="site-header">
+    <!-- Header -->
+    <header class="site-header">
 
-  <div class="brand">
+      <div class="brand">
 
-    <!-- TODO 2:
-         Add a logo for the website.
-         Use the weather emoji 🌤️ inside a div with the class "logo".
-    -->
-<div class="logo">🌤️</div>
+        <!-- TODO 2:
+             Add a logo for the website.
+             Use the weather emoji 🌤️ inside a div with the class "logo".
+        -->
+        <div class="logo">🌤️</div>
 
+        <div>
+          <!-- TODO 3:
+               Add the main heading "SkyCast" using an <h1> element.
+               Add a paragraph below it with the text:
+               "Weather made simple"
+          -->
+          <h1>SkyCast</h1>
+          <p>Weather made simple</p>
+        </div>
 
-    <div>
-      <!-- TODO 3:
-           Add the main heading "SkyCast" using an <h1> element.
-           Add a paragraph below it with the text:
-           "Weather made simple"
+      </div>
+
+      <!-- Lab Sheet 02: Navigation bar -->
+      <nav class="main-nav">
+        <a href="#search">Home</a>
+        <a href="#currentCard">Current</a>
+        <a href="#forecast">Forecast</a>
+      </nav>
+
+      <!-- TODO 4:
+           Create a header badge using a div with the class "header-badge".
+           Display the text:
+           🌍 Live Weather
       -->
+      <div class="header-badge">🌍 Live Weather</div>
 
-      <h1>SkyCast</h1>
-      <p>Weather made simple</p>
-    </div>
-
-  </div>
-
-  <!-- TODO 4:
-       Create a header badge using a div with the class "header-badge".
-       Display the text:
-       🌍 Live Weather
-  -->
-
-  <div class="header-badge">🌍 Live Weather</div>
+    </header>
 
 
-</header>
+    <!-- Main Content -->
+    <main>
 
+      <!-- Hero / Search Section -->
+      <section id="search" class="hero">
 
-<!-- Main Content -->
-<main>
+        <!-- TODO 5:
+             Add an <h2> heading:
+             "Check the weather anywhere"
 
-  <!-- Hero / Search Section -->
-  <section class="hero">
-
-    <!-- TODO 5:
-         Add an <h2> heading:
-         "Check the weather anywhere"
-
-         Add a paragraph with the class "subtitle".
-         The paragraph should contain:
-         "Search any city for current weather and a 5-day forecast."
-    -->
-
-    <h2>Check the weather anywhere</h2>
+             Add a paragraph with the class "subtitle".
+             The paragraph should contain:
+             "Search any city for current weather and a 5-day forecast."
+        -->
+        <h2>Check the weather anywhere</h2>
 
         <p class="subtitle">
           Search any city for current weather and a 5-day forecast.
         </p>
 
-    <div class="search-row">
+        <div class="search-row">
 
-      <!-- TODO 6:
-           Create a text input with:
-           id = "cityInput"
-           placeholder = "Enter a city, e.g. Colombo"
-      -->
-
-      <input
+          <!-- TODO 6:
+               Create a text input with:
+               id = "cityInput"
+               placeholder = "Enter a city, e.g. Colombo"
+          -->
+          <input
             type="text"
             id="cityInput"
             placeholder="Enter a city, e.g. Colombo"
           >
 
-      <!-- TODO 7:
-           Create a button with:
-           id = "searchBtn"
-           Button text = "Search"
-      -->
+          <!-- TODO 7:
+               Create a button with:
+               id = "searchBtn"
+               Button text = "Search"
+          -->
+          <button id="searchBtn">Search</button>
 
-      <button id="searchBtn">Search</button>
+        </div>
 
-    </div>
-
-
-    <!-- TODO 8:
-         Add an empty paragraph for displaying status messages.
-
-         Requirements:
-         - id = "statusMsg"
-         - class = "status"
-    -->
-
-    <p id="statusMsg" class="status"></p>
-
-  </section>
-
-
-  <!-- Current Weather -->
-  <section id="currentCard" class="current-card hidden">
-
-    <!-- TODO 9:
-         Add an <h2> element with:
-         id = "cityName"
-
-         Use "—" as the initial text.
-    -->
-
-    <h2 id="cityName">—</h2>
-
-
-    <div class="current-grid">
-
-      <div class="stat">
-        <span class="stat-label">Temperature</span>
-
-        <!-- TODO 10:
-             Add a span with:
-             class = "stat-value"
-             id = "temp"
-             Initial text = "—"
-        -->
-
-        <span class="stat-value" id="temp">—</span>
-
-      </div>
-
-
-      <div class="stat">
-        <span class="stat-label">Wind Speed</span>
-
-        <!-- TODO 11:
-             Add a span with:
-             class = "stat-value"
-             id = "wind"
-             Initial text = "—"
-        -->
-
-        <span class="stat-value" id="wind">—</span>
-      </div>
-
-
-      <div class="stat">
-        <span class="stat-label">Condition</span>
-
-        <!-- TODO 12:
-             Add a span with:
-             class = "stat-value"
-             id = "condition"
-             Initial text = "—"
-        -->
-
-        <span class="stat-value" id="condition">—</span>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- Forecast -->
-  <section class="forecast-section">
-
-    <div class="section-heading">
-
-      <div>
-
-        <!-- TODO 13:
-             Add the heading:
-             "5-Day Forecast"
-
-             Use an <h2> element.
-        -->
-
-        <h2>5-Day Forecast</h2>
-
-
-        <!-- TODO 14:
-             Add a paragraph containing:
-             "Upcoming weather conditions"
-        -->
-
-        <p>Upcoming weather conditions</p>
-
-      </div>
-
-
-      <!-- TODO 15:
-           Add a span with the class "forecast-icon".
-           Display the calendar emoji 📅.
-      -->
-
-      <span class="forecast-icon">📅</span>
-
-    </div>
-
-
-    <div class="table-wrapper">
-
-      <table>
-
-        <thead>
-          <tr>
-
-            <!-- TODO 16:
-                 Add table heading cells for:
-                 Date
-                 Condition
-                 Max °C
-                 Min °C
-                 Precipitation (mm)
-            -->
-
-            <th>Date</th>
-            <th>Condition</th>
-            <th>Max °C</th>
-            <th>Min °C</th>
-            <th>Precipitation (mm)</th>
-
-          </tr>
-        </thead>
-
-
-        <!-- TODO 17:
-             Create the table body.
+        <!-- TODO 8:
+             Add an empty paragraph for displaying status messages.
 
              Requirements:
-             - Use <tbody>
-             - Set id = "forecastBody"
-             - Leave it empty because JavaScript
-               will insert the forecast rows dynamically.
+             - id = "statusMsg"
+             - class = "status"
         -->
+        <p id="statusMsg" class="status"></p>
 
-        <tbody id="forecastBody"></tbody>
-
-
-      </table>
-
-    </div>
-
-  </section>
-
-</main>
+      </section>
 
 
-<!-- Footer -->
-<footer class="site-footer">
+      <!-- Current Weather -->
+      <section id="currentCard" class="current-card hidden">
 
-  <!-- TODO 18:
-       Create the footer brand.
+        <!-- TODO 9:
+             Add an <h2> element with:
+             id = "cityName"
 
-       Requirements:
-       - Use a div with class "footer-brand"
-       - Add the weather emoji 🌤️
-       - Add "SkyCast" using a <strong> element.
-  -->
+             Use "—" as the initial text.
+        -->
+        <h2 id="cityName">—</h2>
 
-  <div class="footer-brand">
-    🌤️ <strong>SkyCast</strong>
-  </div>
+        <div class="current-grid">
 
-  <!-- TODO 19:
-       Add a paragraph containing:
-       "Simple, fast and reliable weather information."
-  -->
+          <div class="stat">
+            <span class="stat-label">Temperature</span>
 
-  <p>Simple, fast and reliable weather information.</p>
+            <!-- TODO 10:
+                 Add a span with:
+                 class = "stat-value"
+                 id = "temp"
+                 Initial text = "—"
+            -->
+            <span class="stat-value" id="temp">—</span>
+          </div>
 
-  <div class="footer-bottom">
+          <div class="stat">
+            <span class="stat-label">Wind Speed</span>
 
-    <!-- TODO 20:
-         Add two spans:
-         1. © 2026 SkyCast
-         2. Powered by Open-Meteo
-    -->
+            <!-- TODO 11:
+                 Add a span with:
+                 class = "stat-value"
+                 id = "wind"
+                 Initial text = "—"
+            -->
+            <span class="stat-value" id="wind">—</span>
+          </div>
 
-    <span>© 2026 SkyCast</span>
-    <span>Powered by Open-Meteo</span>
+          <div class="stat">
+            <span class="stat-label">Condition</span>
 
-  </div>
+            <!-- TODO 12:
+                 Add a span with:
+                 class = "stat-value"
+                 id = "condition"
+                 Initial text = "—"
+            -->
+            <span class="stat-value" id="condition">—</span>
+          </div>
 
-</footer>
-```
+        </div>
+
+      </section>
+
+
+      <!-- Forecast -->
+      <section id="forecast" class="forecast-section">
+
+        <div class="section-heading">
+
+          <div>
+            <!-- TODO 13:
+                 Add the heading:
+                 "5-Day Forecast"
+
+                 Use an <h2> element.
+            -->
+            <h2>5-Day Forecast</h2>
+
+            <!-- TODO 14:
+                 Add a paragraph containing:
+                 "Upcoming weather conditions"
+            -->
+            <p>Upcoming weather conditions</p>
+          </div>
+
+          <!-- TODO 15:
+               Add a span with the class "forecast-icon".
+               Display the calendar emoji 📅.
+          -->
+          <span class="forecast-icon">📅</span>
+
+        </div>
+
+        <div class="table-wrapper">
+
+          <table>
+
+            <thead>
+              <tr>
+                <!-- TODO 16:
+                     Add table heading cells for:
+                     Date
+                     Condition
+                     Max °C
+                     Min °C
+                     Precipitation (mm)
+                -->
+                <th>Date</th>
+                <th>Condition</th>
+                <th>Max °C</th>
+                <th>Min °C</th>
+                <th>Precipitation (mm)</th>
+              </tr>
+            </thead>
+
+            <!-- TODO 17:
+                 Create the table body.
+
+                 Requirements:
+                 - Use <tbody>
+                 - Set id = "forecastBody"
+                 - Leave it empty because JavaScript
+                   will insert the forecast rows dynamically.
+            -->
+            <tbody id="forecastBody"></tbody>
+
+          </table>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+      <!-- TODO 18:
+           Create the footer brand.
+
+           Requirements:
+           - Use a div with class "footer-brand"
+           - Add the weather emoji 🌤️
+           - Add "SkyCast" using a <strong> element.
+      -->
+      <div class="footer-brand">
+        🌤️ <strong>SkyCast</strong>
+      </div>
+
+      <!-- TODO 19:
+           Add a paragraph containing:
+           "Simple, fast and reliable weather information."
+      -->
+      <p>Simple, fast and reliable weather information.</p>
+
+      <!-- Lab Sheet 02: Footer links -->
+      <nav class="footer-nav">
+        <a href="#search">Home</a>
+        <a href="#forecast">Forecast</a>
+        <a href="https://open-meteo.com" target="_blank">Open-Meteo API</a>
+      </nav>
+
+      <div class="footer-bottom">
+        <!-- TODO 20:
+             Add two spans:
+             1. © 2026 SkyCast
+             2. Powered by Open-Meteo
+        -->
+        <span>© 2026 SkyCast. All rights reserved.</span>
+        <span>Powered by Open-Meteo</span>
+      </div>
+
+    </footer>
 
   </div>
 
